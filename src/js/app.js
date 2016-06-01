@@ -2,17 +2,11 @@
 $(document).ready(function() {
 
 
-// var localArray =
-
-// $('#sortable').append("<li>"+localStorage.getItem()+"</li>");
-// console.log(Objects.keys(localStorage));
-
-// Object.keys(localStorage)
 
 $('#toDoListButton').on('click', function(e){
   e.preventDefault();
   var temp = $('#textArea').val();
-  $('#sortable').append("<li>" + temp + "</li>");
+  $('#sortable').append("<li class='listStuff'>" + temp + "</li>");
   localStorage.setItem('item_'+temp,temp);;
   $('#textArea').val('').focus();
 });
@@ -36,7 +30,7 @@ $( "#sortable" ).sortable();
 for(var i in window.localStorage){
   val = localStorage.getItem(i);
   value = val.split(',');
-$('#sortable').append('<li>'+value+'</li>');
+$('#sortable').append('<li class="listStuff">'+value+'</li>');
 }
 
 
