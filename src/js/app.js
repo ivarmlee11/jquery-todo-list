@@ -8,6 +8,7 @@ $(document).ready(function() {
     e.preventDefault();
     var temp = $('#textArea').val();
     $('#sortable').append('<li class="listStuff">' + temp + '</li>');
+    //.setItem method takes two params, desired key name and its value
     localStorage.setItem('item_' + temp, temp);
     $('#textArea').val('').focus();
   });

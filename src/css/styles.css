@@ -53,5 +53,6 @@ button:hover {
   font-size: 2em;
   padding: 10px;
   background-image: url('../paper.jpg');
-  width: 250px;
+  width: 500px;
+  overflow-x: hidden;
 }
